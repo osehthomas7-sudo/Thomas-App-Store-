@@ -1,48 +1,172 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import Slider from 'react-slick';
-import './App.css';
-import API_BASE_URL from "./config";
-function App(){
-  const [apps,setApps]=useState([]);
-  const [q,setQ]=useState('');
-  const [category,setCategory]=useState('All');
-  const [topOnly,setTopOnly]=useState(false);
-  const [dark,setDark]=useState(false);
-  useEffect(() => {
-  axios(`${API_BASE_URL}/apps`)
-    .then(res => setApps(res.data))
-    .catch(err => console.error("Error fetching apps:", err));
-}, []);
-  const cats=['All',...Array.from(new Set(apps.map(a=>a.category)))];
-  const filtered=apps.filter(a=> (a.name.toLowerCase().includes(q.toLowerCase())||a.category.toLowerCase().includes(q.toLowerCase())) && (category==='All'||a.category===category) && (!topOnly||a.rating>=4.5));
-  const featured=apps.filter(a=>a.rating>=4.7).slice(0,6);
-  const settings={dots:true,infinite:true,autoplay:true,speed:700,autoplaySpeed:3000,slidesToShow:1,slidesToScroll:1,arrows:false};
-  return (<div className={dark?'dark bg-gray-900 text-white min-h-screen':'bg-gray-50 min-h-screen'}>
-    <div className="container mx-auto p-6">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold text-indigo-600">Advanced App Store</h1>
-        <div className="flex gap-3">
-          <button onClick={()=>setDark(!dark)} className="bg-indigo-500 text-white px-3 py-2 rounded">{dark?'Light':'Dark'}</button>
+import React, { useState } from "react";
+
+function App() {
+  const [darkMode, setDarkMode] = useState(true);
+  const [search, setSearch] = useState("");
+  const [selectedApp, setSelectedApp] = useState(null);
+
+  const toggleDarkMode = () => setDarkMode(!darkMode);
+
+  const apps = [
+    { name: "Super Racer", description: "Fast multiplayer racing fun!", icon: "/image/game1.jpg", rating: 4.8, trending: true },
+    { name: "StudyMate", description: "Track study time and boost productivity.", icon: "/image/app1.jpg", rating: 4.6 },
+    { name: "TuneBlast", description: "Stream and download your favorite songs.", icon: "/image/music1.jpg", rating: 4.9, trending: true },
+    { name: "WeatherPro", description: "Live weather updates and forecasts worldwide.", icon: "/image/weather.jpg", rating: 4.4 },
+    { name: "PhotoCam", description: "Take stunning pictures with smart filters.", icon: "/image/camera.jpg", rating: 4.7 },
+    { name: "QuickNotes", description: "Write, save, and organize notes easily.", icon: "/image/notes.jpg", rating: 4.5 },
+    { name: "Galaxy Shooter", description: "Fight alien ships in epic space battles.", icon: "/image/game2.jpg", rating: 4.8, trending: true },
+    { name: "ChatZone", description: "Chat with friends and meet new people.", icon: "/image/social.jpg", rating: 4.3 },
+    { name: "Learnify", description: "Interactive lessons for all ages.", icon: "/image/education.jpg", rating: 4.9 },
+  ];
+
+  const reviews = [
+    "This app is absolutely amazing! ⭐⭐⭐⭐⭐",
+    "Really smooth and fast, love it!",
+    "Great user experience, highly recommend.",
+    "Could use more themes, but overall awesome.",
+    "Five stars! Perfect app design and features.",
+  ];
+
+  const filteredApps = apps.filter(app =>
+    app.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const topRated = apps.filter(app => app.rating >= 4.8);
+  const trending = apps.filter(app => app.trending);
+
+  return (
+    <div className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"} transition-all duration-500`}>
+      {/* Header */}
+      <header className="text-center py-8 border-b border-gray-700 relative">
+        <h1 className="text-4xl font-extrabold text-indigo-400">Thomas App Store</h1>
+        <p className="text-gray-400 mt-2">Explore, Search, and Download Apps</p>
+
+        <button
+          onClick={toggleDarkMode}
+          className="absolute right-5 top-5 bg-indigo-600 hover:bg-indigo-800 text-white px-3 py-1 rounded-full text-sm transition"
+        >
+          {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+        </button>
+      </header>
+
+      {/* Search Bar */}
+      <section className="text-center mt-6">
+        <input
+          type="text"
+          placeholder="🔍 Search apps..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className={`px-4 py-2 rounded-full w-2/3 sm:w-1/3 border ${
+            darkMode
+              ? "bg-gray-800 border-gray-700 text-white"
+              : "bg-white border-gray-300 text-black"
+          }`}
+        />
+      </section>
+
+      {/* Trending Section */}
+      <section className="mt-10 px-6">
+        <h2 className="text-2xl font-semibold mb-4 text-center text-pink-400">🔥 Trending Now</h2>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {trending.map((app, i) => (
+            <div
+              key={i}
+              onClick={() => setSelectedApp(app)}
+              className={`cursor-pointer p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 ${
+                darkMode ? "bg-gray-800" : "bg-white"
+              }`}
+            >
+              <img src={app.icon} alt={app.name} className="w-full h-40 object-cover rounded-lg mb-3" />
+              <h3 className="text-xl font-bold text-indigo-400">{app.name}</h3>
+              <p className="text-sm text-gray-400">{app.description}</p>
+            </div>
+          ))}
         </div>
-      </div>
-      <div className="mb-6 max-w-2xl">
-        <input value={q} onChange={e=>setQ(e.target.value)} placeholder="Search apps or categories..." className="w-full p-3 rounded border"/>
-      </div>
-      <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-3">Featured</h2>
-        {featured.length>0? <Slider {...settings}>{featured.map((f,i)=>(
-          <div key={i} className="p-2"><div className="rounded overflow-hidden shadow bg-white dark:bg-gray-800"><img src={f.image} alt={f.name} className="w-full h-56 object-cover"/><div className="p-4"><h3 className="font-semibold">{f.name}</h3><p className="text-sm text-gray-600 dark:text-gray-300">{f.category}</p></div></div></div>
-        ))}</Slider>:<p>No featured apps</p>}
-      </div>
-      <div className="flex flex-wrap gap-2 mb-6">
-        {cats.map((c,i)=>(<button key={i} onClick={()=>setCategory(c)} className={'px-3 py-1 rounded-full '+(category===c?'bg-indigo-500 text-white':'bg-white dark:bg-gray-800')}>{c}</button>))}
-        <button onClick={()=>setTopOnly(!topOnly)} className={'px-3 py-1 rounded-full '+(topOnly?'bg-yellow-400':'bg-white')}>Top Rated</button>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {filtered.map((a,idx)=>(<div key={idx} className="bg-white dark:bg-gray-800 rounded p-4 shadow"><img src={a.image} alt={a.name} className="w-full h-40 object-cover rounded mb-3"/><h3 className="font-semibold">{a.name}</h3><p className="text-sm text-gray-500 dark:text-gray-300">{a.category} • ⭐ {a.rating}</p><p className="text-sm mt-2 text-gray-700 dark:text-gray-300">{a.description}</p><div className="mt-3"><button className="w-full bg-indigo-600 text-white py-2 rounded">Install</button></div></div>))}
-      </div>
+      </section>
+
+      {/* Top Rated Section */}
+      <section className="mt-14 px-6">
+        <h2 className="text-2xl font-semibold mb-4 text-center text-yellow-400">⭐ Top Rated Apps</h2>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {topRated.map((app, i) => (
+            <div
+              key={i}
+              onClick={() => setSelectedApp(app)}
+              className={`cursor-pointer p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 ${
+                darkMode ? "bg-gray-800" : "bg-white"
+              }`}
+            >
+              <img src={app.icon} alt={app.name} className="w-full h-40 object-cover rounded-lg mb-3" />
+              <h3 className="text-xl font-bold text-indigo-400">{app.name}</h3>
+              <p className="text-sm text-gray-400">{app.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Search Results */}
+      {search && (
+        <section className="mt-14 px-6">
+          <h2 className="text-2xl font-semibold mb-4 text-center text-green-400">🔎 Search Results</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {filteredApps.map((app, i) => (
+              <div
+                key={i}
+                onClick={() => setSelectedApp(app)}
+                className={`cursor-pointer p-5 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 ${
+                  darkMode ? "bg-gray-800" : "bg-white"
+                }`}
+              >
+                <img src={app.icon} alt={app.name} className="w-full h-40 object-cover rounded-lg mb-3" />
+                <h3 className="text-xl font-bold text-indigo-400">{app.name}</h3>
+                <p className="text-sm text-gray-400">{app.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* App Details Modal */}
+      {selectedApp && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
+          <div className={`rounded-xl p-6 w-11/12 md:w-1/2 ${darkMode ? "bg-gray-800" : "bg-white text-black"}`}>
+            <button onClick={() => setSelectedApp(null)} className="float-right text-red-400 text-lg font-bold">
+              ✖
+            </button>
+            <img src={selectedApp.icon} alt={selectedApp.name} className="w-full h-60 object-cover rounded-lg mb-4" />
+            <h2 className="text-2xl font-bold text-indigo-400 mb-2">{selectedApp.name}</h2>
+            <p className="text-gray-400 mb-2">{selectedApp.description}</p>
+            <p className="text-yellow-400 mb-4">⭐ Rating: {selectedApp.rating}/5</p>
+
+            {/* Reviews */}
+            <h4 className="text-lg font-semibold text-indigo-300 mb-2">User Reviews</h4>
+            <ul className="space-y-2 mb-4">
+              {reviews.slice(0, 3).map((review, i) => (
+                <li key={i} className={`p-2 rounded ${darkMode ? "bg-gray-700" : "bg-gray-200"}`}>
+                  {review}
+                </li>
+              ))}
+            </ul>
+
+            <button
+              className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-md"
+              onClick={() => alert(`Downloading ${selectedApp.name}...`)}
+            >
+              ⬇️ Download Now
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Footer */}
+      <footer className="text-center mt-16 pb-10">
+        <h3 className="text-2xl font-semibold mb-3 text-indigo-300">Created by</h3>
+        <img src="/image/thomas.jpg" alt="Thomas" className="w-32 h-32 rounded-full mx-auto mb-3 object-cover border-4 border-indigo-500 shadow-lg hover:scale-110 transition-transform duration-300" />
+        <p className="text-lg font-medium">Thomas</p>
+        <p className="text-sm text-gray-400">App Store Creator & Developer</p>
+      </footer>
     </div>
-  </div>);
+  );
 }
+
 export default App;
