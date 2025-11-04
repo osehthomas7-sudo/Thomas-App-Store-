@@ -2,13 +2,18 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Slider from 'react-slick';
 import './App.css';
+import API_BASE_URL from "./config";
 function App(){
   const [apps,setApps]=useState([]);
   const [q,setQ]=useState('');
   const [category,setCategory]=useState('All');
   const [topOnly,setTopOnly]=useState(false);
   const [dark,setDark]=useState(false);
-  useEffect(()=>{ axios.get('http://localhost:4000/apps').then(r=>setApps(r.data)).catch(e=>console.error(e)); },[]);
+  useEffect(() => {
+  axios(`${API_BASE_URL}/apps`)
+    .then(res => setApps(res.data))
+    .catch(err => console.error("Error fetching apps:", err));
+}, []);
   const cats=['All',...Array.from(new Set(apps.map(a=>a.category)))];
   const filtered=apps.filter(a=> (a.name.toLowerCase().includes(q.toLowerCase())||a.category.toLowerCase().includes(q.toLowerCase())) && (category==='All'||a.category===category) && (!topOnly||a.rating>=4.5));
   const featured=apps.filter(a=>a.rating>=4.7).slice(0,6);
