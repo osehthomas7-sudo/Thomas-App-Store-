@@ -1,0 +1,422 @@
+[
+  {
+    "name": "App 1",
+    "category": "Productivity",
+    "image": "https://via.placeholder.com/600x400.png?text=App+1",
+    "description": "This is App 1, a productivity application for testing and demo purposes.",
+    "rating": 3.6
+  },
+  {
+    "name": "App 2",
+    "category": "Utilities",
+    "image": "https://via.placeholder.com/600x400.png?text=App+2",
+    "description": "This is App 2, a utilities application for testing and demo purposes.",
+    "rating": 3.7
+  },
+  {
+    "name": "App 3",
+    "category": "Health",
+    "image": "https://via.placeholder.com/600x400.png?text=App+3",
+    "description": "This is App 3, a health application for testing and demo purposes.",
+    "rating": 3.8
+  },
+  {
+    "name": "App 4",
+    "category": "Education",
+    "image": "https://via.placeholder.com/600x400.png?text=App+4",
+    "description": "This is App 4, a education application for testing and demo purposes.",
+    "rating": 3.9
+  },
+  {
+    "name": "App 5",
+    "category": "Entertainment",
+    "image": "https://via.placeholder.com/600x400.png?text=App+5",
+    "description": "This is App 5, a entertainment application for testing and demo purposes.",
+    "rating": 4.0
+  },
+  {
+    "name": "App 6",
+    "category": "Finance",
+    "image": "https://via.placeholder.com/600x400.png?text=App+6",
+    "description": "This is App 6, a finance application for testing and demo purposes.",
+    "rating": 4.1
+  },
+  {
+    "name": "App 7",
+    "category": "Photography",
+    "image": "https://via.placeholder.com/600x400.png?text=App+7",
+    "description": "This is App 7, a photography application for testing and demo purposes.",
+    "rating": 4.2
+  },
+  {
+    "name": "App 8",
+    "category": "Lifestyle",
+    "image": "https://via.placeholder.com/600x400.png?text=App+8",
+    "description": "This is App 8, a lifestyle application for testing and demo purposes.",
+    "rating": 4.3
+  },
+  {
+    "name": "App 9",
+    "category": "Games",
+    "image": "https://via.placeholder.com/600x400.png?text=App+9",
+    "description": "This is App 9, a games application for testing and demo purposes.",
+    "rating": 4.4
+  },
+  {
+    "name": "App 10",
+    "category": "Productivity",
+    "image": "https://via.placeholder.com/600x400.png?text=App+10",
+    "description": "This is App 10, a productivity application for testing and demo purposes.",
+    "rating": 4.5
+  },
+  {
+    "name": "App 11",
+    "category": "Utilities",
+    "image": "https://via.placeholder.com/600x400.png?text=App+11",
+    "description": "This is App 11, a utilities application for testing and demo purposes.",
+    "rating": 4.6
+  },
+  {
+    "name": "App 12",
+    "category": "Health",
+    "image": "https://via.placeholder.com/600x400.png?text=App+12",
+    "description": "This is App 12, a health application for testing and demo purposes.",
+    "rating": 4.7
+  },
+  {
+    "name": "App 13",
+    "category": "Education",
+    "image": "https://via.placeholder.com/600x400.png?text=App+13",
+    "description": "This is App 13, a education application for testing and demo purposes.",
+    "rating": 4.8
+  },
+  {
+    "name": "App 14",
+    "category": "Entertainment",
+    "image": "https://via.placeholder.com/600x400.png?text=App+14",
+    "description": "This is App 14, a entertainment application for testing and demo purposes.",
+    "rating": 4.9
+  },
+  {
+    "name": "App 15",
+    "category": "Finance",
+    "image": "https://via.placeholder.com/600x400.png?text=App+15",
+    "description": "This is App 15, a finance application for testing and demo purposes.",
+    "rating": 3.5
+  },
+  {
+    "name": "App 16",
+    "category": "Photography",
+    "image": "https://via.placeholder.com/600x400.png?text=App+16",
+    "description": "This is App 16, a photography application for testing and demo purposes.",
+    "rating": 3.6
+  },
+  {
+    "name": "App 17",
+    "category": "Lifestyle",
+    "image": "https://via.placeholder.com/600x400.png?text=App+17",
+    "description": "This is App 17, a lifestyle application for testing and demo purposes.",
+    "rating": 3.7
+  },
+  {
+    "name": "App 18",
+    "category": "Games",
+    "image": "https://via.placeholder.com/600x400.png?text=App+18",
+    "description": "This is App 18, a games application for testing and demo purposes.",
+    "rating": 3.8
+  },
+  {
+    "name": "App 19",
+    "category": "Productivity",
+    "image": "https://via.placeholder.com/600x400.png?text=App+19",
+    "description": "This is App 19, a productivity application for testing and demo purposes.",
+    "rating": 3.9
+  },
+  {
+    "name": "App 20",
+    "category": "Utilities",
+    "image": "https://via.placeholder.com/600x400.png?text=App+20",
+    "description": "This is App 20, a utilities application for testing and demo purposes.",
+    "rating": 4.0
+  },
+  {
+    "name": "App 21",
+    "category": "Health",
+    "image": "https://via.placeholder.com/600x400.png?text=App+21",
+    "description": "This is App 21, a health application for testing and demo purposes.",
+    "rating": 4.1
+  },
+  {
+    "name": "App 22",
+    "category": "Education",
+    "image": "https://via.placeholder.com/600x400.png?text=App+22",
+    "description": "This is App 22, a education application for testing and demo purposes.",
+    "rating": 4.2
+  },
+  {
+    "name": "App 23",
+    "category": "Entertainment",
+    "image": "https://via.placeholder.com/600x400.png?text=App+23",
+    "description": "This is App 23, a entertainment application for testing and demo purposes.",
+    "rating": 4.3
+  },
+  {
+    "name": "App 24",
+    "category": "Finance",
+    "image": "https://via.placeholder.com/600x400.png?text=App+24",
+    "description": "This is App 24, a finance application for testing and demo purposes.",
+    "rating": 4.4
+  },
+  {
+    "name": "App 25",
+    "category": "Photography",
+    "image": "https://via.placeholder.com/600x400.png?text=App+25",
+    "description": "This is App 25, a photography application for testing and demo purposes.",
+    "rating": 4.5
+  },
+  {
+    "name": "App 26",
+    "category": "Lifestyle",
+    "image": "https://via.placeholder.com/600x400.png?text=App+26",
+    "description": "This is App 26, a lifestyle application for testing and demo purposes.",
+    "rating": 4.6
+  },
+  {
+    "name": "App 27",
+    "category": "Games",
+    "image": "https://via.placeholder.com/600x400.png?text=App+27",
+    "description": "This is App 27, a games application for testing and demo purposes.",
+    "rating": 4.7
+  },
+  {
+    "name": "App 28",
+    "category": "Productivity",
+    "image": "https://via.placeholder.com/600x400.png?text=App+28",
+    "description": "This is App 28, a productivity application for testing and demo purposes.",
+    "rating": 4.8
+  },
+  {
+    "name": "App 29",
+    "category": "Utilities",
+    "image": "https://via.placeholder.com/600x400.png?text=App+29",
+    "description": "This is App 29, a utilities application for testing and demo purposes.",
+    "rating": 4.9
+  },
+  {
+    "name": "App 30",
+    "category": "Health",
+    "image": "https://via.placeholder.com/600x400.png?text=App+30",
+    "description": "This is App 30, a health application for testing and demo purposes.",
+    "rating": 3.5
+  },
+  {
+    "name": "App 31",
+    "category": "Education",
+    "image": "https://via.placeholder.com/600x400.png?text=App+31",
+    "description": "This is App 31, a education application for testing and demo purposes.",
+    "rating": 3.6
+  },
+  {
+    "name": "App 32",
+    "category": "Entertainment",
+    "image": "https://via.placeholder.com/600x400.png?text=App+32",
+    "description": "This is App 32, a entertainment application for testing and demo purposes.",
+    "rating": 3.7
+  },
+  {
+    "name": "App 33",
+    "category": "Finance",
+    "image": "https://via.placeholder.com/600x400.png?text=App+33",
+    "description": "This is App 33, a finance application for testing and demo purposes.",
+    "rating": 3.8
+  },
+  {
+    "name": "App 34",
+    "category": "Photography",
+    "image": "https://via.placeholder.com/600x400.png?text=App+34",
+    "description": "This is App 34, a photography application for testing and demo purposes.",
+    "rating": 3.9
+  },
+  {
+    "name": "App 35",
+    "category": "Lifestyle",
+    "image": "https://via.placeholder.com/600x400.png?text=App+35",
+    "description": "This is App 35, a lifestyle application for testing and demo purposes.",
+    "rating": 4.0
+  },
+  {
+    "name": "App 36",
+    "category": "Games",
+    "image": "https://via.placeholder.com/600x400.png?text=App+36",
+    "description": "This is App 36, a games application for testing and demo purposes.",
+    "rating": 4.1
+  },
+  {
+    "name": "App 37",
+    "category": "Productivity",
+    "image": "https://via.placeholder.com/600x400.png?text=App+37",
+    "description": "This is App 37, a productivity application for testing and demo purposes.",
+    "rating": 4.2
+  },
+  {
+    "name": "App 38",
+    "category": "Utilities",
+    "image": "https://via.placeholder.com/600x400.png?text=App+38",
+    "description": "This is App 38, a utilities application for testing and demo purposes.",
+    "rating": 4.3
+  },
+  {
+    "name": "App 39",
+    "category": "Health",
+    "image": "https://via.placeholder.com/600x400.png?text=App+39",
+    "description": "This is App 39, a health application for testing and demo purposes.",
+    "rating": 4.4
+  },
+  {
+    "name": "App 40",
+    "category": "Education",
+    "image": "https://via.placeholder.com/600x400.png?text=App+40",
+    "description": "This is App 40, a education application for testing and demo purposes.",
+    "rating": 4.5
+  },
+  {
+    "name": "App 41",
+    "category": "Entertainment",
+    "image": "https://via.placeholder.com/600x400.png?text=App+41",
+    "description": "This is App 41, a entertainment application for testing and demo purposes.",
+    "rating": 4.6
+  },
+  {
+    "name": "App 42",
+    "category": "Finance",
+    "image": "https://via.placeholder.com/600x400.png?text=App+42",
+    "description": "This is App 42, a finance application for testing and demo purposes.",
+    "rating": 4.7
+  },
+  {
+    "name": "App 43",
+    "category": "Photography",
+    "image": "https://via.placeholder.com/600x400.png?text=App+43",
+    "description": "This is App 43, a photography application for testing and demo purposes.",
+    "rating": 4.8
+  },
+  {
+    "name": "App 44",
+    "category": "Lifestyle",
+    "image": "https://via.placeholder.com/600x400.png?text=App+44",
+    "description": "This is App 44, a lifestyle application for testing and demo purposes.",
+    "rating": 4.9
+  },
+  {
+    "name": "App 45",
+    "category": "Games",
+    "image": "https://via.placeholder.com/600x400.png?text=App+45",
+    "description": "This is App 45, a games application for testing and demo purposes.",
+    "rating": 3.5
+  },
+  {
+    "name": "App 46",
+    "category": "Productivity",
+    "image": "https://via.placeholder.com/600x400.png?text=App+46",
+    "description": "This is App 46, a productivity application for testing and demo purposes.",
+    "rating": 3.6
+  },
+  {
+    "name": "App 47",
+    "category": "Utilities",
+    "image": "https://via.placeholder.com/600x400.png?text=App+47",
+    "description": "This is App 47, a utilities application for testing and demo purposes.",
+    "rating": 3.7
+  },
+  {
+    "name": "App 48",
+    "category": "Health",
+    "image": "https://via.placeholder.com/600x400.png?text=App+48",
+    "description": "This is App 48, a health application for testing and demo purposes.",
+    "rating": 3.8
+  },
+  {
+    "name": "App 49",
+    "category": "Education",
+    "image": "https://via.placeholder.com/600x400.png?text=App+49",
+    "description": "This is App 49, a education application for testing and demo purposes.",
+    "rating": 3.9
+  },
+  {
+    "name": "App 50",
+    "category": "Entertainment",
+    "image": "https://via.placeholder.com/600x400.png?text=App+50",
+    "description": "This is App 50, a entertainment application for testing and demo purposes.",
+    "rating": 4.0
+  },
+  {
+    "name": "App 51",
+    "category": "Finance",
+    "image": "https://via.placeholder.com/600x400.png?text=App+51",
+    "description": "This is App 51, a finance application for testing and demo purposes.",
+    "rating": 4.1
+  },
+  {
+    "name": "App 52",
+    "category": "Photography",
+    "image": "https://via.placeholder.com/600x400.png?text=App+52",
+    "description": "This is App 52, a photography application for testing and demo purposes.",
+    "rating": 4.2
+  },
+  {
+    "name": "App 53",
+    "category": "Lifestyle",
+    "image": "https://via.placeholder.com/600x400.png?text=App+53",
+    "description": "This is App 53, a lifestyle application for testing and demo purposes.",
+    "rating": 4.3
+  },
+  {
+    "name": "App 54",
+    "category": "Games",
+    "image": "https://via.placeholder.com/600x400.png?text=App+54",
+    "description": "This is App 54, a games application for testing and demo purposes.",
+    "rating": 4.4
+  },
+  {
+    "name": "App 55",
+    "category": "Productivity",
+    "image": "https://via.placeholder.com/600x400.png?text=App+55",
+    "description": "This is App 55, a productivity application for testing and demo purposes.",
+    "rating": 4.5
+  },
+  {
+    "name": "App 56",
+    "category": "Utilities",
+    "image": "https://via.placeholder.com/600x400.png?text=App+56",
+    "description": "This is App 56, a utilities application for testing and demo purposes.",
+    "rating": 4.6
+  },
+  {
+    "name": "App 57",
+    "category": "Health",
+    "image": "https://via.placeholder.com/600x400.png?text=App+57",
+    "description": "This is App 57, a health application for testing and demo purposes.",
+    "rating": 4.7
+  },
+  {
+    "name": "App 58",
+    "category": "Education",
+    "image": "https://via.placeholder.com/600x400.png?text=App+58",
+    "description": "This is App 58, a education application for testing and demo purposes.",
+    "rating": 4.8
+  },
+  {
+    "name": "App 59",
+    "category": "Entertainment",
+    "image": "https://via.placeholder.com/600x400.png?text=App+59",
+    "description": "This is App 59, a entertainment application for testing and demo purposes.",
+    "rating": 4.9
+  },
+  {
+    "name": "App 60",
+    "category": "Finance",
+    "image": "https://via.placeholder.com/600x400.png?text=App+60",
+    "description": "This is App 60, a finance application for testing and demo purposes.",
+    "rating": 3.5
+  }
+]
