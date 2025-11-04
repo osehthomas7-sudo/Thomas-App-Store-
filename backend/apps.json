@@ -419,4 +419,30 @@
     "description": "This is App 60, a finance application for testing and demo purposes.",
     "rating": 3.5
   }
+  ,
+{
+  "name": "Galaxy Defender",
+  "category": "Games",
+  "icon": "galaxy.png",
+  "description": "Defend the galaxy in this fast-paced space shooter!"
+},
+{
+  "name": "Puzzle Master",
+  "category": "Games",
+  "icon": "puzzle.png",
+  "description": "Solve brain-teasing puzzles and unlock achievements."
+},
+{
+  "name": "Movie Stream",
+  "category": "Entertainment",
+  "icon": "movie.png",
+  "description": "Stream the latest movies and shows from anywhere."
+},
+{
+  "name": "Music Jam",
+  "category": "Music",
+  "icon": "music.png",
+  "description": "Discover trending songs and create your own playlists."
+}
+
 ]
